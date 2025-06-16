@@ -1,0 +1,271 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 15px auto;
+  display: block;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.button a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.button a:hover {
+  background: #34495e;
+}
+
+.hire-me {
+  display: block;
+  text-align: center;
+  background: #3498db;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 20px 0;
+}
+
+.imageeee {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 24px;
+}
+
+/* Main Content */
+.main-box {
+  margin-left: 250px;
+  padding: 30px;
+}
+
+/* About Me Section */
+.about-me {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.detail {
+  flex: 1;
+  min-width: 300px;
+}
+
+.profile-picture img {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+/* Skills Section */
+.language {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.language > div {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Projects Section */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-list img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Education Section */
+.education-list {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Contact Section */
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.logos {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-form {
+  flex: 2;
+  min-width: 300px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Footer */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    left: -250px;
+  }
+
+  .main-box {
+    margin-left: 0;
+  }
+
+  .about-me {
+    flex-direction: column;
+  }
+
+  .profile-picture img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .language {
+    grid-template-columns: 1fr;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .button a {
+    text-align: center;
+  }
+
+  .imageeee {
+    flex-wrap: wrap;
+  }
+}
+
+/* Additional Mobile Styles */
+@media (max-width: 360px) {
+  html {
+    font-size: 14px;
+  }
+
+  .main-box {
+    padding: 15px;
+  }
+}
+
+/* Form Styling */
+button {
+  background: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+/* Social Icons */
+.fa-brands {
+  font-size: 24px;
+  color: white;
+  transition: color 0.3s;
+}
+
+.fa-brands:hover {
+  color: #3498db;
+}

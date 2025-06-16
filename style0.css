@@ -1,0 +1,195 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  z-index: 1000;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  max-width: 100%;
+  border-radius: 50%;
+  margin: 15px auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Main Content */
+.main-box {
+  margin-left: 250px;
+  padding: 30px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .main-box {
+    padding: 20px;
+  }
+  
+  .language {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    transform: translateX(-100%);
+    width: 280px;
+  }
+
+  .main-box {
+    margin-left: 0;
+    padding-top: 80px;
+  }
+
+  .about-me {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .profile-picture img {
+    max-width: 250px;
+  }
+
+  .project-list img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .language {
+    grid-template-columns: 1fr;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    min-width: 100%;
+  }
+
+  .education-list h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 14px;
+  }
+
+  .main-box {
+    padding: 15px;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .button a {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .project-list img {
+    height: 150px;
+  }
+}
+
+/* Touch Optimization */
+@media (hover: none) {
+  .button a:hover {
+    background: transparent;
+  }
+  
+  .hire-me:hover {
+    background: #3498db;
+  }
+}
+
+/* Prevent Content Overflow */
+.language > div,
+.project-list > div {
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+/* Image Responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form Enhancements */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Education Section Improvements */
+.education-list {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.education-list hr {
+  margin: 1rem 0;
+}
