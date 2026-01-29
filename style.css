@@ -386,6 +386,102 @@ html {
   line-height: 1.5;
 }
 
+/* Project Link Styling */
+.project-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6600 0%, #e65c00 100%);
+  color: #ffffff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.3);
+  border: 2px solid transparent;
+  margin-top: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.project-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
+  background: linear-gradient(135deg, #ff7700 0%, #ff6600 100%);
+  border-color: #ff8800;
+}
+
+.project-link:hover::before {
+  left: 100%;
+}
+
+.project-link:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(255, 102, 0, 0.3);
+}
+
+/* Dark Mode Specific Styling */
+@media (prefers-color-scheme: dark) {
+  .project-content h3 {
+    color: #ffffff;
+  }
+  
+  .project-content p {
+    color: #8b949e;
+  }
+  
+  .project-link {
+    background: linear-gradient(135deg, #ff6600 0%, #cc5500 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.25);
+  }
+  
+  .project-link:hover {
+    background: linear-gradient(135deg, #ff7700 0%, #e65c00 100%);
+    box-shadow: 0 6px 20px rgba(255, 102, 0, 0.35);
+  }
+}
+
+/* Focus States for Accessibility */
+.project-link:focus {
+  outline: 2px solid #ff6600;
+  outline-offset: 2px;
+}
+
+.project-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .project-link {
+    padding: 10px 20px;
+    font-size: 13px;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-link {
+    padding: 8px 16px;
+    font-size: 12px;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 /* Responsive Layouts */
 @media (min-width: 768px) {
   .project-list {
