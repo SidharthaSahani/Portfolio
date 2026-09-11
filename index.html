@@ -32,6 +32,11 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://www.sidharthasahani.com.np/ogimage.png">
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <!-- Styles -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -41,60 +46,74 @@
 <body>
 
 
-  <!-- Hamburger Icon -->
+  <!-- Hamburger Icon (visible on mobile only) -->
   <div class="hamburger" onclick="toggleSidebar()">
     <i class="fa-solid fa-bars"></i>
   </div>
 
   <!-- Sidebar -->
   <div class="sidebar" id="sidebar">
-    <a href="#home" style="text-decoration: none; color: white;">
-      <h2 class="name">Sidhartha Sahani</h2>
-    </a>
-    <img src="sideimg.jpg" alt="" class="profile-img">
-    <p>Hi, I am Sidhartha and I am a <br>web-developer. Welcome to my Website.</p>
 
-    <div class="button">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skill">Skills</a>
-      <a href="#project">Project</a>
-      <a href="#contact">Contact</a>
+    <!-- Top: avatar + name + bio -->
+    <div class="sidebar-top">
+      <img src="sideimg.jpg" alt="Sidhartha Sahani" class="profile-img">
+      <a href="#home" class="sidebar-name-link">
+        <h2 class="name">Sidhartha Sahani</h2>
+      </a>
+      <p>Hi, I am Sidhartha  a web developer who loves building clean, functional sites. Welcome to my portfolio.</p>
     </div>
 
-    <a href="#contact" class="hire-me">
-      <i class="fa-solid fa-paper-plane" href="#contact"></i>Hire Me
-    </a>
-
-    <div class="imageeee">
-      <a href="https://github.com/Miharth/Hike-Gear-Nepal" target="_blank">
-        <i class="devicon-github-original-wordmark"></i>
-      </a>
-      <a href="#" target="_blank"><i class="devicon-facebook-plain"></i></a>
-      <a href="#" target="_blank"><i class="devicon-twitter-original"></i></a>
-      <a href="https://www.linkedin.com/in/sidhartha-sahani-37371224a/" target="_blank">
-        <i class="devicon-linkedin-plain"></i>
-      </a>
+    <!-- Mid: navigation -->
+    <div class="sidebar-mid">
+      <div class="button">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skill">Skills</a>
+        <a href="#project">Project</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
+
+    <!-- Bottom: hire me + socials -->
+    <div class="sidebar-bottom">
+      <a href="#contact" class="hire-me">
+        <i class="fa-solid fa-paper-plane"></i>Hire Me
+      </a>
+      <div class="imageeee">
+        <a href="https://github.com/SidharthaSahani" target="_blank" title="GitHub">
+          <i class="devicon-github-original-wordmark"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sidhartha-sahani-37371224a/" target="_blank" title="LinkedIn">
+          <i class="devicon-linkedin-plain"></i>
+        </a>
+      </div>
+    </div>
+
   </div>
-
 
   <div class="main-box">
 
     <div class="about-me" id="home">
+      <div class="profile-picture">
+        <img src="profileImg.png" alt="Portrait of Sidhartha Sahani">
+      </div>
       <div class="detail">
         <h2>Sidhartha Sahani </h2>
-        <h4>webdeveloper</h4>
+        <h4>Curious technologist and web developer</h4>
         <p class="bio">
-          Hi, I’m a full-stack web developer. I enjoy building websites from start to finish both the design you see and
-          the code that runs behind it.
-          I’ve worked with HTML, CSS, JavaScript, PHP, MySQL, and Bootstrap. I love learning new things and improving my
-          skills every day.
+          Hi, I’m Sidhartha, a curious person who loves learning about technology and understanding how things work. I
+          enjoy exploring websites, software, computers, electronics, networking, and databases not just using them, but
+          understanding what happens behind the scenes.
+          <br><br>
+          I love building websites and software, experimenting with new technologies, and turning ideas into something
+          real. I’m always curious to learn something new, explore different possibilities, and discuss ideas with people
+          who are passionate about technology.
+          <br><br>
+          For me, technology is not just about writing codeit’s about being curious, asking how and why, experimenting,
+          and continuously learning.
 
         </p>
-      </div>
-      <div class="profile-picture">
-        <img src="profileImg.png" alt="">
       </div>
     </div>
 
@@ -106,8 +125,7 @@
         <h4>Address: New Baneshwor, Kathmandu,Nepal</h4>
         <h4>Zip code: 44600</h4>
         <h4>Email: sidharthasahanii@gmail.com</h4>
-        <h4>Phone : 9823035406</h4>
-        <a href="Sidhartha Sahani Resume .pdf" target="_blank"> <button>Download cv</button></a>
+        <a href="Sidhartha_Sahani_Resume.pdf" target="_blank"> <button>Download cv</button></a>
       </div>
     </div>
 
@@ -238,23 +256,74 @@
       <h2>Projects</h2>
       <p>These are the Projects that I have made</p>
       <div class="project-list">
-          <!-- project 1 -->
+          <!-- Dental projects -->
         <div class="project-card">
-          <a href="https://dental-frontend-rho.vercel.app/">
-            <img src="Dental.png" alt="Hike Gear Nepal" class="project-image">
+          <a href="https://www.perfectdentalcare.com.np/" target="_blank">
+            <img src="perfectdental.webp" alt="Perfect Dental Care website" class="project-image">
           </a>
           <div class="project-content">
-            <h3>Dental Appointment System </h3>
-            <p>A web-based application designed to simplify the process of booking and managing dental appointments. The
-              system allows patients to schedule appointments online, view available time slots, and receive
-              confirmation details. It also provides an admin panel for clinic staff to manage patient records,
-              appointments, and schedules efficiently, improving overall clinic workflow and patient experience.</p>
+            <h3>Perfect Dental Care</h3>
+            <p>Professional dental care website designed to present clinic services, build patient trust, and make it easy for visitors to get in touch.</p>
 
-            <a href="https://dental-frontend-rho.vercel.app/" target="_blank" class="project-link">View
-              Project</a>
+            <a href="https://www.perfectdentalcare.com.np/" target="_blank" class="project-link">View Project</a>
           </div>
         </div>
-          <!-- project 2 -->
+        <div class="project-card">
+          <a href="https://www.acedental.com.np/" target="_blank">
+            <img src="ace.webp" alt="Ace Dental website" class="project-image">
+          </a>
+          <div class="project-content">
+            <h3>Ace Dental</h3>
+            <p>Modern dental clinic website with a clear service-focused presentation and an accessible online experience for prospective patients.</p>
+            <a href="https://www.acedental.com.np/" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <a href="https://www.shantinagardental.com.np/" target="_blank">
+            <img src="shantinagar.webp" alt="Shantinagar Dental website" class="project-image">
+          </a>
+          <div class="project-content">
+            <h3>Shantinagar Dental</h3>
+            <p>Clinic website built to showcase dental services, communicate the practice's value, and help patients take the next step.</p>
+            <a href="https://www.shantinagardental.com.np/" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <a href="https://www.omshantidentalcare.com.np/" target="_blank">
+            <img src="omshati.webp" alt="Om Shanti Dental Care website" class="project-image">
+          </a>
+          <div class="project-content">
+            <h3>Om Shanti Dental Care</h3>
+            <p>Dental care website focused on a welcoming clinic presence, clear information, and a simple path for patients to connect.</p>
+            <a href="https://www.omshantidentalcare.com.np/" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+
+          <!-- project 5 -->
+        <div class="project-card">
+          <a href="https://royal-guard-security-services.vercel.app/" target="_blank">
+            <img src="Royal sec.png" alt="Royal Guard Security Service website" class="project-image">
+          </a>
+          <div class="project-content">
+            <h3>Royal Guard Security Service Pvt. Ltd.</h3>
+            <p>Responsive corporate website built for Royal Guard Security Service Pvt. Ltd., highlighting security services, company profile, and client engagement features. Designed with a clean UI/UX to ensure easy navigation, strong brand presence, and seamless communication with potential clients.</p>
+            <a href="https://royal-guard-security-services.vercel.app/" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+
+          <!-- project 6 -->
+        <div class="project-card">
+          <a href="https://aaa-pms-frontend.vercel.app/login" target="_blank">
+            <img src="PMS.png" alt="PMS software dashboard" class="project-image">
+          </a>
+          <div class="project-content">
+            <h3>PMS Software</h3>
+            <p>Comprehensive patient management software designed for clinics to streamline daily operations. It includes doctor management with commission calculation, patient billing, automated doctor income invoices, appointment scheduling with calendar-based follow-ups, full CRUD functionality for doctors and services, and real-time income tracking.</p>
+            <a href="https://aaa-pms-frontend.vercel.app/login" target="_blank" class="project-link">View Project</a>
+          </div>
+        </div>
+
+          <!-- remaining projects -->
         <div class="project-card">
           <a href="https://grillsandgather.vercel.app/" target="_blank">
             <img src="resturant.png" alt="Restaurant Table Management" class="project-image">
@@ -266,7 +335,7 @@
             <a href="https://grillsandgather.vercel.app/" target="_blank" class="project-link">View Project</a>
           </div>
         </div>
-          <!-- project 3 -->
+
         <div class="project-card">
           <a href="https://earing-frontend.vercel.app/" target="_blank">
             <img src="earing.png" alt="E-commerce Sahani" class="project-image">
@@ -276,20 +345,6 @@
             <p>Responsive jewelry e-commerce platform built with MERN stack. Users can browse products, add to cart,
               make purchases, and manage accounts securely.</p>
             <a href="https://earing-frontend.vercel.app/" target="_blank" class="project-link">View Project</a>
-          </div>
-        </div>
-
-
-          <!-- project 4  -->
-         <div class="project-card">
-          <a href="#" target="_blank">
-            <img src="pacinet Management.png" alt="E-commerce Sahani" class="project-image">
-          </a>
-          <div class="project-content">
-            <h3>Pacinet Management System</h3>
-           <p>Comprehensive patient management system designed for clinics to streamline daily operations. It includes doctor management with commission calculation, patient billing, and automated doctor income invoices. The system features appointment scheduling with calendar-based follow-ups, full CRUD functionality for doctors and services, and real-time income tracking with detailed financial overviews, all within a secure and user-friendly interface.</p>
-
-            <a href="#" target="_blank" class="project-link">View Project</a>
           </div>
         </div>
 
@@ -309,18 +364,21 @@
 
 
           <!-- project 6 -->
-         <div class="project-card">
-          <a href="https://royal-guard-security-services.vercel.app/" target="_blank">
-            <img src="Royal sec.png" alt="E-commerce Sahani" class="project-image">
-          </a>
-          <div class="project-content">
-            <h3>Royal Guard Security Service Pvt.ltd. </h3>
-            <p>Responsive corporate website built for Royal Guard Security Service Pvt. Ltd., highlighting security services, company profile, and client engagement features. Designed with a clean UI/UX to ensure easy navigation, strong brand presence, and seamless communication with potential clients.</p>
+     
 
-            <a href="https://royal-guard-security-services.vercel.app/" target="_blank" class="project-link">View Project</a>
-          </div>
+      </div>
+    </div>
+
+    <div class="experience" id="experience">
+      <h2>Experience</h2>
+      <div class="experience-list">
+        <div class="experience-item">
+          <h3>Back End Developer</h3>
+          <h4>Aariyana Tech Solution · Internship</h4>
+          <p class="experience-meta">Aug 2025 - Oct 2025 · 3 mos</p>
+          <p class="experience-meta">Katunje, Bhaktapur · On-site</p>
+          <a href="https://www.linkedin.com/in/sidhartha-sahani-37371224a/edit/forms/position/2880383438/" target="_blank" class="experience-link">View on LinkedIn</a>
         </div>
-
       </div>
     </div>
 
@@ -334,7 +392,7 @@
           <h4>New Summit Collage</h4>
           <h4>Tribhuvan University(TU)</h4>
         </div>
-        <hr style="width:50%;text-align:left;margin-left:0; opacity: 0.2;">
+        <hr class="education-divider">
 
         <div class="plustwo">
           <h3>2020-2022</h3>
@@ -342,24 +400,21 @@
           <h4>NASA Collage</h4>
           <h4> National Examinations Board (NEB)</h4>
         </div>
-        <hr style="width:50%;text-align:left;margin-left:0; opacity: 0.2;">
+        <hr class="education-divider">
 
         <div class="school">
           <h3>2010-2020</h3>
           <h4>V.S Nietan School </h4>
           <h4> National Examinations Board (NEB)</h4>
         </div>
-        <hr style="width:50%;text-align:left;margin-left:0 ; opacity: 0.2;">
+        <hr class="education-divider">
 
       </div>
     </div>
 
-    <BR></BR>
-
     <div class="con" id="contact">
 
-      <h2 class="contactmee" style="font-size: 2rem;
-            color: #ffffff;">Contact me</h2>
+      <h2 class="contactmee">Contact me</h2>
       <br>
 
       <div class="contact">
@@ -370,12 +425,6 @@
             <i class="fa-solid fa-location-dot"></i>
             <h4>Address</h4>
             <h5>Santinagar,Kathmandu</h5>
-          </div>
-
-          <div class="logo">
-            <i class="fa-solid fa-phone"></i>
-            <h4>Phone</h4>
-            <h5>+977 9823035406</h5>
           </div>
 
           <div class="logo">
@@ -418,12 +467,10 @@
           <!-- Brand Section -->
           <div class="footer-brand">
             <h2>Sidhartha Sahani</h2>
-            <p>Passionate Web Developer creating beautiful, responsive, and functional websites.</p>
+            
             <div class="footer-socials">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://github.com/SidharthaSahani"><i class="fab fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/sidhartha-sahani-37371224a/"><i class="fab fa-linkedin-in"></i></a>
             </div>
           </div>
 
@@ -441,14 +488,9 @@
           <!-- Contact Info -->
           <div class="footer-contact">
             <h3>Contact</h3>
-            <!-- <div id ="contact-me">
-                    <p><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</p>
-                    <p><i class="fas fa-phone-alt"></i> +977 +977 9823035406</p>
-                    <p><i class="fas fa-envelope"></i> sidharthasahanii@gmail.com</p>
-                    </div> -->
+        
             <div id="contact-me">
               <p><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</p>
-              <p><i class="fas fa-phone-alt"></i> +977 9823035406</p>
               <p><i class="fas fa-envelope"></i> sidharthasahanii@gmail.com</p>
             </div>
 
@@ -473,12 +515,18 @@
       window.open('"C:\Users\T U F\OneDrive\Desktop\Portfolio\Sidhartha-Sahani-cv.pdf"', '_blank');
     }
 
-
-
-
     function toggleSidebar() {
       document.getElementById('sidebar').classList.toggle('active');
     }
+
+    // Close sidebar when a nav link is clicked on mobile
+    document.querySelectorAll('.sidebar-mid a, .sidebar .hire-me').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (window.innerWidth <= 900) {
+          document.getElementById('sidebar').classList.remove('active');
+        }
+      });
+    });
   </script>
 
 
