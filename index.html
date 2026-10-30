@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -17,7 +17,7 @@
   <meta property="og:description" content="Full Stack Developer portfolio showcasing MERN projects and real-world systems.">
   <meta property="og:url" content="https://www.sidharthasahani.com.np/">
   
-  <!-- ✅ IMPORTANT FIX -->
+  <!-- âœ… IMPORTANT FIX -->
   <meta property="og:image" content="https://www.sidharthasahani.com.np/ogimage.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -35,9 +35,10 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;900&display=swap" rel="stylesheet">
 
   <!-- Styles -->
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
@@ -47,9 +48,8 @@
 
 
   <!-- Hamburger Icon (visible on mobile only) -->
-  <div class="hamburger" onclick="toggleSidebar()">
-    <i class="fa-solid fa-bars"></i>
-  </div>
+  <button class="hamburger" type="button" aria-label="Toggle navigation" aria-controls="sidebar" aria-expanded="false" onclick="toggleSidebar()">
+    <i class="fa-solid fa-bars"></i></button>
 
   <!-- Sidebar -->
   <div class="sidebar" id="sidebar">
@@ -65,7 +65,7 @@
 
     <!-- Mid: navigation -->
     <div class="sidebar-mid">
-      <div class="button">
+      <div class="nav-list">
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#skill">Skills</a>
@@ -77,14 +77,12 @@
 
     <!-- Bottom: hire me + socials -->
     <div class="sidebar-bottom">
-      <a href="#contact" class="hire-me">
-        <i class="fa-solid fa-paper-plane"></i>Hire Me
-      </a>
+      
       <div class="imageeee">
         <a href="https://github.com/SidharthaSahani" target="_blank" title="GitHub">
           <i class="devicon-github-original-wordmark"></i>
         </a>
-        <a href="https://www.linkedin.com/in/sidhartha-sahani-37371224a/" target="_blank" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/sidhartha-sahani/" target="_blank" title="LinkedIn">
           <i class="devicon-linkedin-plain"></i>
         </a>
       </div>
@@ -92,44 +90,40 @@
 
   </div>
 
-  <div class="main-box">
+  <main class="main-box">
 
-    <div class="about-me" id="home">
+    <section class="about-me" id="home">
       <div class="profile-picture">
         <img src="profileImg.png" alt="Portrait of Sidhartha Sahani">
       </div>
       <div class="detail">
-        <h2>Sidhartha Sahani </h2>
-        <h4>Curious technologist and web developer</h4>
-        <p class="bio">
-          Hi, I’m Sidhartha, a curious person who loves learning about technology and understanding how things work. I
-          enjoy exploring websites, software, computers, electronics, networking, and databases not just using them, but
-          understanding what happens behind the scenes.
-          <br><br>
-          I love building websites and software, experimenting with new technologies, and turning ideas into something
-          real. I’m always curious to learn something new, explore different possibilities, and discuss ideas with people
-          who are passionate about technology.
-          <br><br>
-          For me, technology is not just about writing codeit’s about being curious, asking how and why, experimenting,
-          and continuously learning.
-
-        </p>
+        <h1>Sidhartha Sahani </h1>
+        <h2>Curious technologist and web developer</h2>
+        <a href="#contact" class="hire-me">
+          <i class="fa-solid fa-paper-plane"></i>Hire Me
+        </a>
+        
       </div>
-    </div>
+    </section>
 
-    <div class="aboutme" id="about">
+    <section class="aboutme" id="about">
       <h2>About me</h2>
+      <p class="bio">Hi, I’m Sidhartha, a curious person who loves learning about technology and understanding how things work. I
+          enjoy exploring websites, software, computers, electronics, networking, and databases not just using them, but
+          understanding what happens behind the scenes.</p>
+      <p class="bio">I love building websites and software, experimenting with new technologies, and turning ideas into something
+          real. I’m always curious to learn something new, explore different possibilities, and discuss ideas with people
+          who are passionate about technology.</p>
+      <p class="bio">For me, technology is not just about writing code it’s about being curious, asking how and why, experimenting,
+          and continuously learning.</p>
       <div class="aboutme-more">
-        <h4>Name: Sidhartha Sahani</h4>
-        <h4>Date of birth: January 09 , 2004 </h4>
-        <h4>Address: New Baneshwor, Kathmandu,Nepal</h4>
-        <h4>Zip code: 44600</h4>
-        <h4>Email: sidharthasahanii@gmail.com</h4>
+        <p>Name: Sidhartha Sahani</p>
+        <p>Email: sidharthasahanii@gmail.com</p>
         <a href="Sidhartha_Sahani_Resume.pdf" target="_blank"> <button>Download cv</button></a>
       </div>
-    </div>
+    </section>
 
-    <div class="skills" id="skill">
+    <section class="skills" id="skill">
       <h2>skills</h2>
       <!-- <p>i have base knowledge of these these software etc </p> -->
       <div class="language">
@@ -160,7 +154,7 @@
         <div class="python">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="35" />
           <h3>Python</h3>
-          <p>I have a solid understanding of Python and use it for scripting, automation, and problem-solving. I'm
+          <p>I have a solid understanding of Python and use it for scripting, automation, and problem-solving. I’m
             comfortable with data structures, file handling, and building basic applications and tools.</p>
         </div>
 
@@ -177,7 +171,7 @@
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" width="35" />
           <h3>C#</h3>
           <P>I have a good understanding of C# and use it to build basic desktop applications and work with
-            object-oriented programming concepts. I'm exploring Windows Forms and .NET for real-world development.</P>
+            object-oriented programming concepts. I’m exploring Windows Forms and .NET for real-world development.</P>
         </div>
 
         <div class="SQL">
@@ -250,9 +244,9 @@
         </div>
 
       </div>
-    </div>
+    </section>
 
-    <div class="projects" id="project">
+    <section class="projects" id="project">
       <h2>Projects</h2>
       <p>These are the Projects that I have made</p>
       <div class="project-list">
@@ -301,13 +295,13 @@
 
           <!-- project 5 -->
         <div class="project-card">
-          <a href="https://royal-guard-security-services.vercel.app/" target="_blank">
+          <a href="https://www.royalguardsecurity.com.np/" target="_blank">
             <img src="Royal sec.png" alt="Royal Guard Security Service website" class="project-image">
           </a>
           <div class="project-content">
             <h3>Royal Guard Security Service Pvt. Ltd.</h3>
             <p>Responsive corporate website built for Royal Guard Security Service Pvt. Ltd., highlighting security services, company profile, and client engagement features. Designed with a clean UI/UX to ensure easy navigation, strong brand presence, and seamless communication with potential clients.</p>
-            <a href="https://royal-guard-security-services.vercel.app/" target="_blank" class="project-link">View Project</a>
+            <a href="https://www.royalguardsecurity.com.np/" target="_blank" class="project-link">View Project</a>
           </div>
         </div>
 
@@ -367,22 +361,22 @@
      
 
       </div>
-    </div>
+    </section>
 
-    <div class="experience" id="experience">
+    <section class="experience" id="experience">
       <h2>Experience</h2>
       <div class="experience-list">
         <div class="experience-item">
           <h3>Back End Developer</h3>
-          <h4>Aariyana Tech Solution · Internship</h4>
-          <p class="experience-meta">Aug 2025 - Oct 2025 · 3 mos</p>
-          <p class="experience-meta">Katunje, Bhaktapur · On-site</p>
-          <a href="https://www.linkedin.com/in/sidhartha-sahani-37371224a/edit/forms/position/2880383438/" target="_blank" class="experience-link">View on LinkedIn</a>
+          <h4>Aariyana Tech Solution Â· Internship</h4>
+          <p class="experience-meta">Aug 2025 - Oct 2025 Â· 3 mos</p>
+          <p class="experience-meta">Katunje, Bhaktapur Â· On-site</p>
+          <a href="https://www.linkedin.com/in/sidhartha-sahani/" target="_blank" class="experience-link">View on LinkedIn</a>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="education">
+    <section class="education">
       <h2>Education</h2>
       <div class="education-list">
 
@@ -410,9 +404,9 @@
         <hr class="education-divider">
 
       </div>
-    </div>
+    </section>
 
-    <div class="con" id="contact">
+    <section class="con" id="contact">
 
       <h2 class="contactmee">Contact me</h2>
       <br>
@@ -422,21 +416,15 @@
         <div class="logos">
 
           <div class="logo">
-            <i class="fa-solid fa-location-dot"></i>
-            <h4>Address</h4>
-            <h5>Santinagar,Kathmandu</h5>
-          </div>
-
-          <div class="logo">
             <i class="fa-solid fa-envelope"></i>
-            <h4>Email</h4>
-            <h5>sidharthasahanii@gmail.com</h5>
+            <h3>Email</h3>
+            <p>sidharthasahanii@gmail.com</p>
           </div>
 
           <div class="logo">
             <i class="fa-solid fa-globe"></i>
-            <h4>Website</h4>
-            <h5>sidharthasahani.com.np</h5>
+            <h3>Website</h3>
+            <p>sidharthasahani.com.np</p>
           </div>
 
 
@@ -458,7 +446,7 @@
 
       </div>
 
-    </div>
+    </section>
 
     <div class="footer">
       <footer class="new-footer">
@@ -470,7 +458,7 @@
             
             <div class="footer-socials">
               <a href="https://github.com/SidharthaSahani"><i class="fab fa-github"></i></a>
-              <a href="https://www.linkedin.com/in/sidhartha-sahani-37371224a/"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.linkedin.com/in/sidhartha-sahani/"><i class="fab fa-linkedin-in"></i></a>
             </div>
           </div>
 
@@ -490,7 +478,6 @@
             <h3>Contact</h3>
         
             <div id="contact-me">
-              <p><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</p>
               <p><i class="fas fa-envelope"></i> sidharthasahanii@gmail.com</p>
             </div>
 
@@ -506,7 +493,7 @@
 
     </div>
 
-  </div>
+  </main>
 
 
 
@@ -516,14 +503,17 @@
     }
 
     function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle('active');
+      var sidebar = document.getElementById('sidebar');
+      var isOpen = sidebar.classList.toggle('active');
+      document.querySelector('.hamburger').setAttribute('aria-expanded', String(isOpen));
     }
 
     // Close sidebar when a nav link is clicked on mobile
     document.querySelectorAll('.sidebar-mid a, .sidebar .hire-me').forEach(function(link) {
       link.addEventListener('click', function() {
-        if (window.innerWidth <= 900) {
+        if (window.innerWidth <= 960) {
           document.getElementById('sidebar').classList.remove('active');
+          document.querySelector('.hamburger').setAttribute('aria-expanded', 'false');
         }
       });
     });
@@ -533,3 +523,16 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
